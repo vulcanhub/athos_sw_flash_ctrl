@@ -1,0 +1,20 @@
+CAPI=2:
+
+name: "bci:sw:flash_ctrl:1.0"
+description: "flash_ctrl"
+
+filesets:
+  files_flash_ctrl:
+    depend:
+      - bci:sw:base:1.0
+      - bci:sw:top_athos_sw:1.0
+    files:
+      - flash_ctrl.h :           {is_include_file: true}
+      - regs/flash_ctrl_regs.h : {is_include_file: true}
+      - flash_ctrl.c
+    file_type: swCSource
+
+targets:
+  default: 
+    filesets:
+      - files_flash_ctrl
